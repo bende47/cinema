@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "name": "Refrigirateur",
+      "price": 22500,
+      "quantity": 12,
+      "selected": false,
+      "available": false,
+      "id": 6
+    },
+    {
+      "name": "Computer",
+      "price": 1200,
+      "quantity": 50,
+      "selected": true,
+      "available": false,
+      "id": 7
+    },
+    {
+      "name": "TV",
+      "price": 700,
+      "quantity": 100,
+      "selected": true,
+      "available": true,
+      "id": 8
+    },
+    {
+      "name": "PC PORTABLE",
+      "price": 950,
+      "quantity": 250,
+      "selected": false,
+      "available": false,
+      "id": 9
+    },
+    {
+      "name": "Cuisinière",
+      "price": 350,
+      "quantity": 10,
+      "selected": false,
+      "available": true,
+      "id": 10
+    }
+  ]
+}
