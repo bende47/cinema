@@ -6,6 +6,7 @@ import {catchError, map, startWith} from "rxjs/operators";
 import {AppDataState, DataStateEnum} from "../../state/product.state";
 import {NotificationService} from "../../services/notification/notification.service";
 import {DialogService} from "../../services/dialog/dialog.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-products',
@@ -21,7 +22,8 @@ export class ProductsComponent implements OnInit {
   constructor(
     private productsService: ProductsService,
     private notificationService: NotificationService,
-    private dialogService: DialogService
+    private dialogService: DialogService,
+    private router: Router
   ) {
   }
 
@@ -88,5 +90,13 @@ export class ProductsComponent implements OnInit {
           }
         }
       ).catch(() => console.log('Une erreur est survenue'));
+  }
+
+  onNewProducts() {
+    this.router.navigateByUrl("/newProducts");
+  }
+
+  editProduct(p: Product) {
+    this.router.navigateByUrl("/editProducts/"+p.id);
   }
 }

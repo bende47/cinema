@@ -9,6 +9,9 @@
     <li>
       <button class="btn btn-sm btn-outline-info ml-2" (click)="onGetAvailableProducts()"> Available</button>
     </li>
+    <li>
+      <button class="btn btn-sm btn-outline-info ml-2" (click)="onNewProducts()"> New product</button>
+    </li>
   </ul>
   <ul class="navbar navbar-nav ml-auto">
     <li>
@@ -63,7 +66,7 @@
             <input type="checkbox" *ngIf="!p.available" >
           </td>
           <td>
-            <button class="btn btn-sm btn-primary">
+            <button class="btn btn-sm btn-primary" (click)="editProduct(p)" >
               <span class="fa fa-pencil"></span>
             </button>
             <button class="btn btn-sm btn-danger ml-2" (click)="deleteProduct(p)">

@@ -33,12 +33,12 @@
       "id": 9
     },
     {
+      "id": 10,
       "name": "Cuisinière",
-      "price": 350,
-      "quantity": 10,
-      "selected": false,
-      "available": true,
-      "id": 10
+      "price": "350",
+      "quantity": "10",
+      "selected": true,
+      "available": true
     }
   ]
 }

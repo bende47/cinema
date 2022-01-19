@@ -12,6 +12,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
 import { DialogComponent } from './components/dialog/dialog.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductsAddComponent } from './components/products-add/products-add.component';
+import { ProductsEditComponent } from './components/products-edit/products-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavBarComponent,
     ProductsComponent,
     HomeComponent,
-    DialogComponent
+    DialogComponent,
+    ProductsAddComponent,
+    ProductsEditComponent
   ],
   imports: [
     BrowserModule,
