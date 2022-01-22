@@ -1,12 +1,12 @@
 {
   "products": [
     {
+      "id": 6,
       "name": "Refrigirateur",
       "price": 22500,
       "quantity": 12,
       "selected": false,
-      "available": false,
-      "id": 6
+      "available": false
     },
     {
       "name": "Computer",

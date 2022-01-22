@@ -3,7 +3,7 @@ import {ProductsService} from "../../services/products/products.service";
 import {Product} from "../../model/product.model";
 import {Observable, of} from "rxjs";
 import {catchError, map, startWith} from "rxjs/operators";
-import {AppDataState, DataStateEnum} from "../../state/product.state";
+import {ActionEvent, AppDataState, DataStateEnum, ProductsActionsType} from "../../state/product.state";
 import {NotificationService} from "../../services/notification/notification.service";
 import {DialogService} from "../../services/dialog/dialog.service";
 import {Router} from "@angular/router";
@@ -97,6 +97,49 @@ export class ProductsComponent implements OnInit {
   }
 
   editProduct(p: Product) {
-    this.router.navigateByUrl("/editProducts/"+p.id);
+    this.router.navigateByUrl("/editProducts/" + p.id);
+  }
+
+  onActionEvent($event: ActionEvent) {
+    switch ($event.type) {
+      /**
+       * Action provenant de products nav-bar
+       */
+      case ProductsActionsType.GET_ALL_PRODUCTS:
+        this.onGetAllProducts();
+      break;
+
+      case ProductsActionsType.GET_SELECTED_PRODUCTS:
+        this.onGetSelectedProducts();
+      break;
+
+      case ProductsActionsType.GET_AVAILABLE_PRODUCTS:
+        this.onGetAvailableProducts();
+      break;
+
+      case ProductsActionsType.SEARCH_PRODUCTS:
+        this.onSearch($event.payload);
+      break;
+
+
+      case ProductsActionsType.NEW_PRODUCTS:
+        this.onNewProducts();
+      break;
+
+      /**
+       * Action provenant de products list
+       */
+      case ProductsActionsType.EDIT_PRODUCTS:
+        this.editProduct($event.payload)
+      break;
+
+      case ProductsActionsType.DELETE_PRODUCTS:
+        this.deleteProduct($event.payload)
+      break;
+
+
+
+    }
+
   }
 }

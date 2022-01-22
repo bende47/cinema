@@ -14,6 +14,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductsAddComponent } from './components/products-add/products-add.component';
 import { ProductsEditComponent } from './components/products-edit/products-edit.component';
+import { ProductsNavBarComponent } from './components/products/products-nav-bar/products-nav-bar.component';
+import { ProductsListComponent } from './components/products/products-list/products-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ProductsEditComponent } from './components/products-edit/products-edit.
     HomeComponent,
     DialogComponent,
     ProductsAddComponent,
-    ProductsEditComponent
+    ProductsEditComponent,
+    ProductsNavBarComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,
