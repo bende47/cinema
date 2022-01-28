@@ -31,14 +31,6 @@
       "selected": false,
       "available": false,
       "id": 9
-    },
-    {
-      "id": 10,
-      "name": "Cuisinière",
-      "price": "350",
-      "quantity": "10",
-      "selected": true,
-      "available": true
     }
   ]
 }

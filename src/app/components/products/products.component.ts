@@ -7,6 +7,7 @@ import {ActionEvent, AppDataState, DataStateEnum, ProductsActionsType} from "../
 import {NotificationService} from "../../services/notification/notification.service";
 import {DialogService} from "../../services/dialog/dialog.service";
 import {Router} from "@angular/router";
+import {EventDriverService} from "../../state/event.driver.service";
 
 @Component({
   selector: 'app-products',
@@ -23,11 +24,15 @@ export class ProductsComponent implements OnInit {
     private productsService: ProductsService,
     private notificationService: NotificationService,
     private dialogService: DialogService,
-    private router: Router
+    private router: Router,
+    private eventDrivenService: EventDriverService
   ) {
   }
 
   ngOnInit(): void {
+    this.eventDrivenService.sourceEventSubjetObservable.subscribe((actionEvent: ActionEvent)=>{
+      this.onActionEvent(actionEvent);
+    });
   }
 
   /*onGetAllProducts() {
